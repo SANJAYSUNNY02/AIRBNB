@@ -1,0 +1,82 @@
+  .carousels{
+    display: flex;
+  }
+  .mat-card{
+    height: 350px;
+    width: 250px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  // .carousel-container {
+
+  //   // margin: 20px 0px;
+  //   // height: 400px;
+  //   // width: 250px;
+  //   // padding: 20px 20px;
+  //   // text-align: center;
+  //   // margin-right: 10px;
+    
+  
+  // }
+  
+  
+  
+  .item {
+  
+    text-align: center;
+  
+    cursor: pointer;
+  
+  }
+  
+  
+  
+  .item-image {
+  
+    width: 100%;
+  
+    height: 220px;
+  
+  }
+  
+  
+  
+  .carousel-header {
+  
+    // margin: 20px 0px;
+    align-items: flex-end;
+  
+  }
+  
+  
+  
+  .carousel-title {
+  
+    font-size: 21px;
+  
+    font-family: Arial, Helvetica, sans-serif;
+  
+    font-weight: 700;
+  
+  }
+  
+  
+  
+  .carousel-link {
+  
+    padding-left: 15px;
+  
+    font-family: Arial, Helvetica, sans-serif;
+  
+    font-size: 14px;
+  
+    text-decoration: none;
+  
+    color: #007185;
+  
+    font-weight: 700;
+  
+  }
+  .favorite-icon {
+    color: rgb(254, 17, 96);
+  }

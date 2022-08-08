@@ -1,0 +1,48 @@
+<div class="carousels" *ngFor="let adcaurosels of allCaurosels">
+  
+    <mat-card>
+      <div class="carousel-container">
+        <p-carousel [value]="adcaurosels.images" [numVisible]="1" [numScroll]="1" [circular]="false"
+        [responsiveOptions]="responsiveOptions">
+    
+        <ng-template pTemplate="header">
+    
+          <div class="carousel-header">
+            <button mat-icon-button class="favorite-icon" aria-label="Example icon-button with heart icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+    
+          </div>
+    
+        </ng-template>
+    
+        <ng-template let-item pTemplate="item">
+    
+          <div class="item">
+    
+            <img class="item-image" [src]="adcaurosels.images" />
+    
+          </div>
+          <!-- <p>{{item.description}}</p> -->
+    
+        </ng-template>
+        
+    
+       </p-carousel>
+
+       <div>
+        <p class="carousel-title">{{adcaurosels.placeName}}</p>
+    
+        <p class="carousel-cost">{{adcaurosels.rent}}</p>
+       </div>
+     </div>
+     
+    
+    </mat-card>
+  
+
+  </div>
+  
+
+  <!-- (click)="showPlaceDetails()  -->
+    

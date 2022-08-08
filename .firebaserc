@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "resortbooking-4dc54": {
+      "hosting": {
+        "resortBooking": [
+          "resortbooking-4dc54"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "resortbooking-4dc54"
+  }
+}

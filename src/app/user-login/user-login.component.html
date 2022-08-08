@@ -1,0 +1,50 @@
+<div class="login" [ngStyle]="{backgroundImage:'url(./assets/loginpage.jpg)'}">
+    <div>
+        <app-main-nav></app-main-nav>
+    </div>
+    
+    <div class="login-container">
+        <form [formGroup]="loginBoxFormGroup">
+            <div class="loginBox-Container">
+                <img src="assets/logologin.png">
+                <p class="headings">Sign in</p>
+                <div>
+                    <div class="container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Enter your email</mat-label>
+                            <input matInput placeholder="pat@example.com" formControlName="email">
+                            <mat-error *ngIf="loginBoxFormGroup.get('email')?.invalid">{{getEmailErrorMessage()}}
+                            </mat-error>
+
+                        </mat-form-field>
+                    </div>
+                    <div class="container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Enter your password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                                <button mat-icon-button matSuffix (click)="hide = !hide"
+                                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                                <mat-error *ngIf="loginBoxFormGroup.get('password')?.invalid">{{getPasswordErrorMessage()}}</mat-error>
+  
+
+                        </mat-form-field>
+                    </div>
+                    <div>
+
+                        <span>
+                            <button mat-raised-button (click)="login()" color="primary"
+                                [disabled]="!loginBoxFormGroup.valid">Login</button>
+                        </span>
+                    </div>
+                </div>
+
+                <p class="r-link">Don't have an account? <a href="/register" [routerLink]="'/register'"
+                        routerLinkActive="selectedlink">Register Here!</a></p>
+            </div>
+        </form>
+
+    </div>
+
+</div>

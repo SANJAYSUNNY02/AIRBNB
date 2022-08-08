@@ -1,0 +1,97 @@
+.nav {
+    overflow: hidden;
+    // background-color:rgb(252, 215, 215);
+  }
+  
+  .nav a {
+    float: left;
+    color: #f56969;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .nav a:hover {
+    background-color: #f9bebe;
+    color: black;
+    border-radius: 30px;
+  }
+  
+  .logo {
+    height: 40px;
+    width: 200px;
+  }
+  
+//   .nav input[type=text] {
+//     background: transparent;
+//     border-color: #f56969;
+//     width: 500px;
+//     float: left;
+//     color: #f56969;
+//     padding: 6px;
+//     border-radius: 10px;
+//     margin-top: 8px;
+//     margin-right: 40px;
+//     margin-left: 80px;
+//     font-size: 17px;
+//   }
+  
+  a.navlink.selectedlink {
+    color: #fc0101;
+  }
+  
+  
+  .search-Bar {
+    border: 2px solid rgba(0, 0, 0, 0.233);
+    background: transparent;
+    // text-align: center;
+    width: 65%;
+    margin: 3px 3px;
+    padding: 2px 4px 4px 10px;
+    border-radius: 30px;
+    // text-align: center;
+    flex: 1;
+  }
+  
+  .search-Bar form {
+    display: flex;
+    align-items: center;
+    // flex-wrap: wrap;
+  }
+  
+  .search-Bar form input {
+    display: block;
+    border: 0;
+    outline: none;
+    background: transparent;
+  
+  }
+  
+  .search-Bar form button {
+    background: #f56969;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+  .search-Bar form button img{
+    width:15px;
+    margin-top: 7px;
+  }
+  .loction-input{
+    flex: 1;
+  }
+  .search-Bar form label{
+    font-weight: 600;
+  }
+//   .insideNav {
+//     float: right;
+//     margin-top: 10px;
+  
+//     color: #f56969;
+  
+//   }
+  

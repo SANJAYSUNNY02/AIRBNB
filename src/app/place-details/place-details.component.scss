@@ -1,0 +1,159 @@
+.place-details{
+    padding: 0 12%;
+
+}
+.place-title{
+    margin-top: 50px;
+}
+.place-title h1{
+    font-weight: 600;
+}
+.place-title .row{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+margin: 10px 0;
+}
+.place-title span{
+    margin: 0 20px;;
+}
+.place-title .mat-ion{
+    color: darkgoldenrod;
+    font-size: 14px;
+}
+.image-gallery{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 'first first . . ' 'first first . . ';
+    margin: 20px 0;
+}
+.image-gallery img{
+    width:100%;
+    display: block;
+    border-radius: 10px;
+}
+.gallery-img-1{
+    grid-area: first;
+
+}
+.main-details h2{
+    font-weight: 500;
+}
+.main-details h4{
+    text-align: right;
+    font-size: 22px;
+}
+.line-break{
+    order: 0;
+    height: 1px;
+    background: #ccc;
+    max-width: 800px;
+    margin: 20px 0 50px;
+}
+.form{
+    margin: 30px 0;
+background: #fff;
+box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+border-radius: 8px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+padding: 10px 5px;
+
+}
+.form mat-label{
+    display: block;
+
+}
+.form div{
+    padding: 20px;
+
+}
+.form input{
+    background: transparent;
+    outline: none;
+    border: 0;
+}
+.form  button{
+    background: #ff5361;
+    border: 0;
+    outline: none;
+    color: #fff;
+    padding: 10px;
+    width: 300px;
+    border-radius: 8px;
+    font-size: 16px;
+
+}
+.details-list{
+    list-style: none;
+    margin:50px 0;
+
+}
+.details-list li{
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #555;
+    position: relative;
+
+}
+.details-list li span{
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+}
+.details-list li mat-ion{
+    position: absolute;
+    top: 5px;
+    left: -40px;
+
+}
+.place-description{
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+.map{
+    margin: 50px 0;
+
+}
+.map iframe{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.map h3{
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.map b{
+    display: block;
+    margin-top: 16px;
+}
+.host{
+    display: flex;
+    align-items: center;
+}
+.host img{
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+.host h2{
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.host mat-ion{
+    color: darkgoldenrod;
+}
+.contact{
+    display: inline-block;
+    margin: 40px 0 40px 120px;
+    text-decoration: none;
+    color: #555;
+    padding: 15px 50px;
+    border : 1px solid #ff5361;
+    border-radius: 8px;
+    
+}

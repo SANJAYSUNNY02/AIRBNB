@@ -1,0 +1,96 @@
+<div class="registration" [ngStyle]="{backgroundImage:'url(./assets/registrationPage.jpg)'}">
+    <div>
+        <app-main-nav></app-main-nav>
+    </div>
+    <div class="add-user-button-container">
+        <button mat-raised-button color="primary" (click)="addUser()">
+            Start Registration
+        </button>
+    </div>
+    <form [formGroup]="registrationFormGroup">
+        <div formArrayName="users">
+            <div *ngFor="let user of users.controls; let i = index">
+                <div [formGroupName]="i">
+                    <div class="registration-Container">
+                        <p class="headings">Register Here!</p>
+                        <div>
+                            <div class="container">
+                                <div>
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Enter First Name</mat-label>
+                                        <input matInput placeholder="First Name" formControlName="firstName">
+                                        <mat-error
+                                            *ngIf="user.get('firstName')?.hasError('required') && user.get('firstName')?.touched">
+                                            Please enter FirstName
+                                        </mat-error>
+            
+                                    </mat-form-field>
+            
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Enter Last Name</mat-label>
+                                        <input matInput placeholder="Last Name" formControlName="lastName">
+                                        <mat-error
+                                            *ngIf="user.get('lastName')?.hasError('required') && user.get('lastName')?.touched">
+                                            Please enter LastName
+                                        </mat-error>
+            
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="email-container">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Enter your email</mat-label>
+                                    <input matInput placeholder="pat@example.com" formControlName="email">
+                                    <mat-error *ngIf="user.get('email')?.invalid">{{getEmailErrorMessage()}}
+                                    </mat-error>
+            
+                                </mat-form-field>
+                            </div>
+                            <div class="container">
+                                <div>
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Enter password</mat-label>
+                                        <input matInput type="password" placeholder="Enter Password" formControlName="password">
+                                        <mat-error *ngIf="user.get('password')?.invalid">
+                                            {{getPasswordErrorMessage()}}
+                                        </mat-error>
+            
+                                    </mat-form-field>
+            
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Confirm password</mat-label>
+                                        <input matInput type="password" placeholder="Confirm password" formControlName="confirmPassword">
+                                        <mat-error *ngIf="user.get('password')?.invalid">
+                                            {{getConfirmPasswordErrorMessage()}}
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+            
+            
+                            </div>
+            
+                            <!-- <div class="container">
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-label>Gender: </mat-label>
+                                    <mat-radio-button value="male">Male </mat-radio-button>
+                                    <mat-radio-button value="female">Female </mat-radio-button>
+                                    <mat-radio-button value="others">Others </mat-radio-button>
+                                </mat-radio-group>
+            
+                            </div> -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </form>
+    <div class="button" >
+        <span>
+            <button mat-raised-button (click)="register()" color="primary"
+                [disabled]="registrationFormGroup.invalid">Register</button>
+        </span>
+    </div>
+</div>
