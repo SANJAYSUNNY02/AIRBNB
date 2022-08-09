@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AdCauroselsService } from '../services/ad-caurosels.service';
 import { Adcarousel } from './home';
 
@@ -11,12 +12,16 @@ import { Adcarousel } from './home';
 })
 export class HomeComponent implements OnInit {
   @Input () allCaurosels: Adcarousel[] =[];
-  constructor(public adcauroselService:AdCauroselsService){
+  constructor(public adcauroselService:AdCauroselsService,public router: Router){
     this.adcauroselService.fetchPosts().subscribe((adcarousels: Adcarousel[]) => {
       this.allCaurosels = adcarousels;
   })
   }
   ngOnInit(): void {
+    
+  }
+  public showPlaceDetails(adCaurosel:Adcarousel) :void{
+    this.router.navigate(['/placeDetails',adCaurosel.id]);
     
   }
   

@@ -11,6 +11,7 @@ export class Image{
     constructor(public placeImg:string) {}
   }
   export class Adcarousels{
+    
     constructor(public adcarousels:Adcarousel[]){
     }
   }
@@ -20,5 +21,27 @@ export class Image{
       public rent: string,
       public id:number,
     public  images: Image[]) {
+      }
+  }
+
+
+
+  export class DescImage{
+    constructor(public placeImg:string) {}
+  }
+  export class PlaceDetails{
+    
+    constructor(public placeDetails:PlaceDetail[]){
+    }
+  }
+  export class PlaceDetail{
+    constructor(
+      public placeName : string,
+      public rent: string,
+      public id:number,
+    public  images: DescImage[],
+    public location:string,
+    public rating:string,
+    public reviews:string) {
       }
   }

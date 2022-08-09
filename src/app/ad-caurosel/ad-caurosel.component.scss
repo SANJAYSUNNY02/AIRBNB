@@ -1,10 +1,13 @@
   .carousels{
     display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
   }
   .mat-card{
     height: 350px;
     width: 250px;
     margin-top: 20px;
+    margin-left: 20px;
     cursor: pointer;
   }
   // .carousel-container {

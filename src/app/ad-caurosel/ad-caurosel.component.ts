@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Adcarousel, Adcarousels, Image } from '../home/home';
 import { AdCauroselsService } from '../services/ad-caurosels.service';
 // import { AdCarousel, CarouselImage } from '../home/home';
@@ -10,8 +11,9 @@ import { AdCauroselsService } from '../services/ad-caurosels.service';
 })
 export class AdCauroselComponent implements OnInit {
   @Input () allCaurosels: Adcarousel[] =[];
+  carousel!:Adcarousels;
    images: Image[]=[];
-  // @Output() productClicked = new EventEmitter<Adcarousels>();
+  @Output() placeClicked = new EventEmitter<Adcarousel>();
   items!:Image[];
   responsiveOptions = [
 
@@ -48,7 +50,7 @@ export class AdCauroselComponent implements OnInit {
   ];
 
 
-  constructor(public adcauroselService:AdCauroselsService){
+  constructor(public adcauroselService:AdCauroselsService,public router: Router){
     this.adcauroselService.fetchPosts().subscribe((adcarousels: Adcarousel[]) => {
       this.allCaurosels = adcarousels;
   })
@@ -59,6 +61,12 @@ export class AdCauroselComponent implements OnInit {
   }
   // public showPlaceDetails(): void{
   //   console.log(this.allCaurosels);
-  //   this.productClicked.emit(this.allCaurosels);
+  //   // this.placeClicked.emit(this.allCaurosels);
   // }
+  public showPlaceDetails(i:number): void {
+    
+    this.placeClicked.emit(this.allCaurosels[i]);
+    console.log(this.allCaurosels);
+    //  this.router.navigate(["EmployeeDetails"]);
+  }
 }

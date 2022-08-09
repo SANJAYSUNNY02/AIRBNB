@@ -1,7 +1,7 @@
-<div class="carousels" *ngFor="let adcaurosels of allCaurosels">
-  
-    <mat-card>
-      <div class="carousel-container">
+<div class="carousels"  >
+  <div *ngFor="let adcaurosels of allCaurosels ; let i=index" >
+    <mat-card (click)="showPlaceDetails(i)">
+      <div class="carousel-container" >
         <p-carousel [value]="adcaurosels.images" [numVisible]="1" [numScroll]="1" [circular]="false"
         [responsiveOptions]="responsiveOptions">
     
@@ -20,7 +20,7 @@
     
           <div class="item">
     
-            <img class="item-image" [src]="adcaurosels.images" />
+            <img class="item-image" [src]="item.placeImg" />
     
           </div>
           <!-- <p>{{item.description}}</p> -->
@@ -42,6 +42,9 @@
   
 
   </div>
+</div> 
+  
+    
   
 
   <!-- (click)="showPlaceDetails()  -->
