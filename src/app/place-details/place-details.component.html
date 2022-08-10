@@ -1,16 +1,16 @@
 <div class="details-container">
     <app-navbar></app-navbar>
-    <div class="place-details">
+    <div class="place-details"  >
         <div class="place-title">
-            <h1>{{allCaurosels}}</h1>
+            <h1>{{placeDetail?.placeName}}</h1>
             <div class="row">
                 <div>
-                    <span><b>4.5<mat-icon>star</mat-icon></b></span>
+                    <span><b>{{placeDetail?.rating}}<mat-icon>star</mat-icon></b></span>
                     
-                    <span>125 reviews</span>
+                    <span>{{placeDetail?.reviews}}reviews</span>
                 </div>
                 <div>
-                    <p>Location: Maldives</p>
+                    <p>Location:{{placeDetail?.Location}}</p>
                 </div>
             </div>
         </div>
@@ -24,12 +24,12 @@
         </div>
         <div class="main-details">
             <h2>
-                entire place hosted by sann
+                entire place hosted by {{placeDetail?.hostName}}
             </h2>
             <p>
-                2 guest &nbsp; 2 beds with attached bathroom &nbsp; 1 kitchen
+                {{placeDetail?.rooms}}
             </p>
-            <h4>$1259 per day</h4>
+            <h4>{{placeDetail?.rent}} per day</h4>
         </div>
         <hr class="line-break">
         <form class="form">
@@ -65,7 +65,7 @@ The villa also has two members of staff on site. Meal options can be selected fr
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100542.03289240063!2d73.06920664107177!3d-0.640764099080758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x24b59bd07e38ba65%3A0x49d017c16b9b5086!2sShangri-La&#39;s%20Villingili%20Resort%20%26%20Spa%2C%20Maldives!5e0!3m2!1sen!2sin!4v1659600350810!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <b>
-                Maldives
+                {{placeDetail?.placeName}}
             </b>
             <p>
                 finding peace
@@ -76,7 +76,7 @@ The villa also has two members of staff on site. Meal options can be selected fr
             <img src="assets/host.png" >
             <div>
                 <h2>
-                    Hosted by Sann
+                    Hosted by {{placeDetail?.hostName}}
                 </h2>
                 <p>
                     <span><mat-icon>star</mat-icon>

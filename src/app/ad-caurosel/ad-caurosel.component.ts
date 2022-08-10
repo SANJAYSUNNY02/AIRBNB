@@ -65,7 +65,7 @@ export class AdCauroselComponent implements OnInit {
   // }
   public showPlaceDetails(i:number): void {
     
-    this.placeClicked.emit(this.allCaurosels[i]);
+    this.router.navigate(['/placeDetails',this.allCaurosels[i].id]);
     console.log(this.allCaurosels);
     //  this.router.navigate(["EmployeeDetails"]);
   }
